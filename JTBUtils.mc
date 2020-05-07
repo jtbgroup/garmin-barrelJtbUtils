@@ -18,12 +18,19 @@ module JTBUtils {
 	const OPTION_COLOR_DK_BLUE= 11;
 	const OPTION_COLOR_PURPLE=12 ;
 	const OPTION_COLOR_PINK=13;
+	
+	const OPTION_FONT_XTINY=0;
+	const OPTION_FONT_TINY=1;
+	const OPTION_FONT_SMALL=2;
 		
 	
 	class Helper {
 		hidden static var propertiesHelper = new PropertiesHelper();
 		hidden static var colorHelper = new ColorHelper();
 		hidden static var iconHelper = new IconHelper();
+		hidden static var fontHelper = new FontHelper();
+		
+		//COLORS
 		
 		function getRandomColor(colorsToAvoid){
 			return colorHelper.getRandomColor(colorsToAvoid);
@@ -37,13 +44,21 @@ module JTBUtils {
 			return colorHelper.getColorById(id);
 		}
 	
+		//PROPERTIES
+		
+		function getPropertyAsColor(key){
+			return propertiesHelper.getPropertyAsColor(key);
+		}
+		
 		function getPropertyValue(key){
 			return propertiesHelper.getPropertyValue(key);
 		}
 		
-		function getRawPropertyValue(key){
-			return propertiesHelper.getRawPropertyValue(key);
+		function getPropertyAsFont(key){
+			return propertiesHelper.getPropertyAsFont(key);
 		}
+		
+		//ICONS
 		
 		function loadColoredIconRez(iconDictionary){
 			iconHelper.loadColoredIconRez(iconDictionary);
@@ -56,24 +71,18 @@ module JTBUtils {
 		function getRandomColoredIcon(iconDictId, colorsToAvoid){
 			return iconHelper.getRandomColoredIcon(iconDictId, colorsToAvoid);
 		}
+		
+		//FONTS
+		function getFontById(key){
+			return fontHelper.getFontById(key);
+		}
 	}
 	
+	
+	//COLORS
 	
 	function getColorById(id){
 		return helper.getColorById(id);
-	}
-	
-	
-	function loadColoredIconRez(iconDictionary){
-		helper.loadColoredIconRez(iconDictionary);
-	}
-	
-	function getColoredIcon(iconDictId, colorPropertyKey){
-		return helper.getColoredIcon(iconDictId, colorPropertyKey);
-	}
-	
-	function getRandomColoredIcon(iconDictId, colorsToAvoid){
-		return helper.getRandomColoredIcon(iconDictId, colorsToAvoid);
 	}
 	
 	/**
@@ -89,13 +98,41 @@ module JTBUtils {
 	function getRandomColorId(colorsToAvoid){
 		return helper.getRandomColorId(colorsToAvoid);
 	}
-	
+
+	// PROPERTIES
+
 	function getPropertyValue(key){
 		return helper.getPropertyValue(key);
 	}
 	
-	function getRawPropertyValue(key){
-		return helper.getRawPropertyValue(key);
+	function getPropertyAsColor(key){
+		return helper.getPropertyAsColor(key);
 	}
+	
+	function getPropertyAsFont(key){
+		return helper.getPropertyAsFont(key);
+	}
+	
+	//ICONS
+	
+	function loadColoredIconRez(iconDictionary){
+		helper.loadColoredIconRez(iconDictionary);
+	}
+	
+	
+	function getRandomColoredIcon(iconDictId, colorsToAvoid){
+		return helper.getRandomColoredIcon(iconDictId, colorsToAvoid);
+	}
+	
+	function getColoredIcon(iconDictId, colorPropertyKey){
+		return helper.getColoredIcon(iconDictId, colorPropertyKey);
+	}
+	
+	//FONTS
+	function getFontById(key){
+		return helper.getFontById(key);
+	}
+	
+	
 	
 }
