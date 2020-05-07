@@ -26,20 +26,21 @@ module JTBUtils {
 		}	
 
 		public function getPropertyValue(key){
-			var value = getProperty(key);
-			if(key.find("PROP_COLOR") != null){
-				var color =  getColorById(value);
-			//	Sys.println(key + " => "+value+" => "+color);
-				return color;
-			}
-			
-			//Sys.println(key + " => "+ value);
-			return value;
-		}
-		
-		public function getRawPropertyValue(key){
 			return getProperty(key);
 		}
+
+		public function getPropertyAsColor(key){
+			var value = getProperty(key);
+			var color =  getColorById(value);
+			return color;
+		}
+		
+		function getPropertyAsFont(key){
+			var value = getProperty(key);
+			var font =  getFontById(value);
+			return font;
+		}
+		
 	}
 	
 	

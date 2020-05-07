@@ -9,7 +9,7 @@ module JTBUtils {
 		}
 			
 		function getColoredIcon(iconDictId, colorPropertyKey){
-			return rez.get(iconDictId).get(JTBUtils.getRawPropertyValue(colorPropertyKey));
+			return rez.get(iconDictId).get(JTBUtils.getPropertyValue(colorPropertyKey));
 		}
 		
 		function getRandomColoredIcon(iconDictId, colorPropertyKey, colorsToAvoid){
