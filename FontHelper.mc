@@ -9,7 +9,8 @@ module JTBUtils {
 		protected var FONTS_D={
 			OPTION_FONT_XTINY=>Gfx.FONT_SYSTEM_XTINY, 
 			OPTION_FONT_TINY=>Gfx.FONT_SYSTEM_TINY, 
-			OPTION_FONT_SMALL=>Gfx.FONT_SYSTEM_SMALL
+			OPTION_FONT_SMALL=>Gfx.FONT_SYSTEM_SMALL,
+			OPTION_FONT_MEDIUM=>Gfx.FONT_SYSTEM_MEDIUM
 		};
 	    
 	   public function getFontById(fontId){
