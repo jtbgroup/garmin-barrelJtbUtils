@@ -36,6 +36,7 @@ module JTBUtils {
 	const OPTION_FONT_TINY=1;
 	const OPTION_FONT_SMALL=2;
 	const OPTION_FONT_MEDIUM=3;
+	const OPTION_FONT_LARGE=4;
 		
 	
 	class Helper {
