@@ -51,8 +51,11 @@ module JTBUtils {
 		    return getRandom(colorsToAvoid, true);
 		}
 		
+		/**
+		* get a random color between the basic 8 bits colors
+		*/
 		private function getRandom(colorsToAvoid, returnId){
-	    	var r = Mt.rand() % COLORS_D.size();
+	    	var r = Mt.rand() % 14;
 			var color = COLORS_D.get(r);
 	    	if(null != colorsToAvoid && colorsToAvoid.indexOf(color) > -1){
 	    		return getRandom(colorsToAvoid, returnId);
